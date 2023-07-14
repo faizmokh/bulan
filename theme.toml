@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "bulan"
+license = "MIT"
+licenselink = "https://github.com/faizmokh/bulan/blob/main/LICENSE"
+description = "Just a simple single layout theme"
+homepage = "https://github.com/faizmokh/bulan"
+tags = ["Hugo", "Tailwind CSS", "theme", "starter"]
+features = []
+min_version = "0.88.0"
+
+[author]
+  name = "Faiz Mokhtar"
+  homepage = "https://github.com/faizmokh/"

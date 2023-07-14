@@ -1,0 +1,22 @@
+theme = "bulan"
+languageCode = "en-us"
+baseurl = "http://example.com/"
+title = "Bulan Theme Dev"
+
+author = "Faiz Mokhtar"
+copyright = "Copyright © 2019-2023, Faiz Mokhtar, all rights reserved."
+
+[params]
+    name = "Bulan"
+    description = "A simple bootstraped theme for Hugo, build with Tailwindcss."
+
+    github_user = "faizmokh"
+    github_repo = "https://github.com/faizmokh/bulan"
+    github_banner = true
+
+    favicon = "favicon.ico"
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
