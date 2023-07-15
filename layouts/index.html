@@ -3,4 +3,17 @@
     <h1 class="font-serif font-extralight text-5xl welcome-headline">{{ .Title }}</h1>
     {{ .Content }}
 </article>
+
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+{{- range $paginator.Pages }}
+<div class="justify-self-center justify-center mx-auto rounded border-2 border-gray-800 bg-white mb-8 shadow-xl">
+    <div class="bg-gray-800 max-w-none px-6 py-4 text-lg font-medium tracking-wide">
+        <h1 class="text-white"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    </div>
+    <article class="prose prose-slate lg:prose-lg hover:prose-a:text-sky-500 max-w-none px-6 pt-6 pb-8">
+        {{ .Content }}
+    </article>
+</div>
+{{- end }}
+
 {{ end }}
