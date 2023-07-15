@@ -13,6 +13,18 @@
     <article class="prose prose-slate lg:prose-lg hover:prose-a:text-sky-500 max-w-none px-6 pt-6 pb-8">
         {{ .Content }}
     </article>
+    <div class="flex justify-start px-6 pb-8 space-x-4">
+        <div class="rounded bg-neutral-100 text-xs leading-tight text-neutral-500 px-3 py-2">
+            Posted: {{ .Date.Format "2 Jan 2006" }}
+        </div>
+        <div class="rounded bg-neutral-100 text-xs leading-tight text-neutral-500 px-3 py-2">
+            Tags:
+            {{ range $i, $e := (.GetTerms "tags" )}}
+                {{ if $i }}, {{ end }}
+                <a href="{{ $e.Permalink }}" class="hover:text-gray-800">{{ $e.LinkTitle | upper }}</a>
+            {{ end }}
+        </div>
+    </div>
 </div>
 {{- end }}
 
